@@ -45,3 +45,13 @@ export type OnchainStoreModalReact = {
 export type MockCheckoutButtonReact = {
   onClick: () => void;
 };
+
+export type ChargeDetails = {
+  name?: string;
+  description?: string;
+  pricing_type?: string;
+  local_price?: {
+    amount: string;
+    currency: string;
+  };
+};

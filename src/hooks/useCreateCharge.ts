@@ -1,6 +1,4 @@
 import { useCallback } from 'react';
-import { COINBASE_COMMERCE_API_KEY } from 'src/config';
-import { COMMERCE_API_URL } from 'src/links';
 
 type Price = {
   amount: string;
@@ -16,16 +14,21 @@ export type ChargeDetails = {
 const useCreateCharge = () => {
   const createCharge = useCallback(async (chargeDetails: ChargeDetails) => {
     try {
-      const res = await fetch(`${COMMERCE_API_URL}/charges`, {
+      const res = await fetch('/api/charges', {
         method: 'POST',
         body: JSON.stringify(chargeDetails),
         headers: {
           'Content-Type': 'application/json',
-          'X-CC-Api-Key': COINBASE_COMMERCE_API_KEY,
         },
       });
-      const { data } = await res.json();
-      return data.id;
+
+      if (!res.ok) {
+        const error = await res.json();
+        throw new Error(error.error || 'Failed to create charge');
+      }
+
+      const { id } = await res.json();
+      return id;
     } catch (error) {
       console.error('Error creating charge:', error);
       throw error;
