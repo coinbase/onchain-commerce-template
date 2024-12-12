@@ -4,7 +4,9 @@
 
 An Onchain Commerce Template built with [OnchainKit](https://onchainkit.xyz), and ready to be deployed to Vercel.
 
-Play with it live on https://onchain-commerce-template.vercel.app/
+Play with it live on https://onchain-commerce-template.vercel.app/, or deploy it to your own Vercel account:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcoinbase%2Fonchain-commerce-template&env=NEXT_PUBLIC_ONCHAINKIT_API_KEY,NEXT_PUBLIC_COINBASE_COMMERCE_API_KEY&envDescription=Environment%20variables%20documentation&envLink=https%3A%2F%2Fgithub.com%2Fcoinbase%2Fonchain-commerce-template%3Ftab%3Dreadme-ov-file%23setup&project-name=onchain-commerce-template&repository-name=onchain-commerce-template)
 
 Have fun! ⛵️
 
