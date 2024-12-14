@@ -47,7 +47,7 @@ Next, you'll want to replace `products` in the `OnchainStoreProvider` with your 
 
 ```sh
 # Install bun in case you don't have it
-bun curl -fsSL <https://bun.sh/install> | bash
+curl -fsSL https://bun.sh/install | bash
 
 # Install packages
 bun i
