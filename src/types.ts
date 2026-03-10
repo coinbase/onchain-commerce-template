@@ -33,19 +33,6 @@ export type QuantityInputButtonReact = {
   label: string;
 };
 
-export type OnchainStoreCartReact = {
-  setShowModal?: (value: boolean) => void;
-  showModal?: boolean;
-};
-
-export type OnchainStoreModalReact = {
-  closeModal: () => void;
-};
-
-export type MockCheckoutButtonReact = {
-  onClick: () => void;
-};
-
 export type ChargeDetails = {
   name?: string;
   description?: string;
