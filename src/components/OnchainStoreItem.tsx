@@ -1,5 +1,5 @@
-import type { Product } from 'src/types';
 import Image from 'next/image';
+import type { Product } from 'src/types';
 import QuantityInput from './QuantityInput';
 
 export default function OnchainStoreItem({ id, name, price, image }: Product) {
@@ -11,7 +11,7 @@ export default function OnchainStoreItem({ id, name, price, image }: Product) {
       <div className="flex grow justify-center md:relative">
         <Image
           src={image}
-          alt="123"
+          alt={name}
           className="mx-auto object-contain max-sm:max-w-[300px] md:absolute md:h-full md:w-auto"
         />
       </div>

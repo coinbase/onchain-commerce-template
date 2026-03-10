@@ -19,10 +19,8 @@
   "dependencies": {
     "@coinbase/onchainkit": "^0.35.0",
     "next": "^14.2.5",
-    "permissionless": "^0.1.26",
     "react": "^18",
-    "react-dom": "^18",
-    "siwe": "^2.3.2"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",

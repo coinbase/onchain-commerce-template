@@ -1,12 +1,12 @@
 import { useCallback, useMemo } from 'react';
+import MinusSvg from 'src/svg/MinusSvg';
+import PlusSvg from 'src/svg/PlusSvg';
 import type {
   Quantities,
   QuantityInputButtonReact,
   QuantityInputReact,
 } from 'src/types';
 import { useOnchainStoreContext } from './OnchainStoreProvider';
-import PlusSvg from 'src/svg/PlusSvg';
-import MinusSvg from 'src/svg/MinusSvg';
 
 function QuantityInputButton({
   onClick,

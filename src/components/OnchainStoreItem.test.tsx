@@ -22,14 +22,12 @@ vi.mock('next/image', () => {
     default: ({
       src,
       alt,
-      width,
-      height,
+      className,
     }: {
       src: string;
       alt: string;
-      width: number;
-      height: number;
-    }) => <img src={src} alt={alt} width={width} height={height} />,
+      className: string;
+    }) => <img src={src} alt={alt} className={className} />,
   };
 });
 
@@ -39,11 +37,9 @@ describe('OnchainStoreItem', () => {
 
     expect(screen.getByText('Sample Product')).toBeInTheDocument();
     expect(screen.getByText('19.99 USDC')).toBeInTheDocument();
-    const imageElement = screen.getByAltText('123');
+    const imageElement = screen.getByAltText('Sample Product');
     expect(imageElement).toBeInTheDocument();
     expect(imageElement).toHaveAttribute('src', mockProduct.image);
-    expect(imageElement).toHaveAttribute('width', '400');
-    expect(imageElement).toHaveAttribute('height', '400');
     expect(screen.getByTestId('quantity-input-1')).toBeInTheDocument();
   });
 });

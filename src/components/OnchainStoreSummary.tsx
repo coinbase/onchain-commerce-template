@@ -9,7 +9,6 @@ export default function OnchainStoreSummary() {
           className="font-bold text-3xl leading-tight"
           style={{
             fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
-            fontWeight: 700,
             fontStretch: 'condensed',
           }}
         >
